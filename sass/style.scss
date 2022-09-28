@@ -1,15 +1,15 @@
 @import 'variables';
 @import 'scss/bootstrap';
+
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
 /* 
 ======================
-Halaman pertama (di slide PDF)
- 1. Section slideshow
- 2. Text Heading center
- 3. text dengan apa namanya dengan fon besar di awalan
- 4. Rounded kuning dengan shadow
- 5. Buku apakah itu caroiusel atau bukan (ditambah dengan tombol kuning)
-
+Halaman  (di slide PDF)
 ===========================*/
+body{
+    font-weight: 400;
+    color: #000;
+}
 #slideshow{
     .swiper-slide{
         .slide-content{
@@ -71,3 +71,13 @@ Halaman pertama (di slide PDF)
     }
    
 }
+
+.sus-item{
+    .btn{
+        transition: .35s ease-out;
+    }
+    .btn[aria-expanded="true"]{
+        transform: rotate(180deg);
+    }
+}
+    
