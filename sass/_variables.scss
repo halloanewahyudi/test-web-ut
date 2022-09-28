@@ -1,0 +1,59 @@
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: $spacer * .25,
+  2: $spacer * .5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+  6: $spacer * 4.5,
+  7: $spacer * 6,
+  8: $spacer * 7.5,
+  9: $spacer * 9,
+  10: $spacer * 10.5,
+  11: $spacer * 12,
+  12: $spacer * 13.5,
+)!default;
+
+//ENABLE NEGATIVE MARGIN UTILITY CLASSES
+$enable-negative-margins: true;
+
+//CUSTOMIZE UTILITIES VIA UTILITIES API
+$utilities: (
+  "min-viewport-height": ( //ADD min-vh CLASSES
+    property: min-height,
+    class: min-vh,
+    responsive: true,
+    values: ( 
+      25: 25vh,
+      50: 50vh,
+      75: 75vh,
+      100: 100vh,
+    )
+  ),
+   
+);
+
+@mixin bg-light-gradient {
+ background: rgb(238,238,238);
+ background: linear-gradient(0deg, rgba(238,238,238,1) 0%, rgba(255,255,255,1) 100%);
+}
+.bg-light-gradient {
+  @include bg-light-gradient;
+}
+
+@mixin  list-angka {
+  list-style: upper-greek ;
+}
+.list-angka{
+  @include list-angka;
+}
+
+@mixin  card-shadow {
+  -webkit-box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.43);
+-moz-box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.43);
+box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.43);
+}
+.card-shadow{
+  @include card-shadow;
+}

@@ -1,0 +1,73 @@
+@import 'variables';
+@import 'scss/bootstrap';
+/* 
+======================
+Halaman pertama (di slide PDF)
+ 1. Section slideshow
+ 2. Text Heading center
+ 3. text dengan apa namanya dengan fon besar di awalan
+ 4. Rounded kuning dengan shadow
+ 5. Buku apakah itu caroiusel atau bukan (ditambah dengan tombol kuning)
+
+===========================*/
+#slideshow{
+    .swiper-slide{
+        .slide-content{
+            transition: 10s ease-out;
+		   transform: scale(1);
+        }
+        &.swiper-slide-active {
+			.slide-content {
+				transform: scale(1.1);
+                
+			}
+            .box{
+                transform: scale(1)!important;
+
+            }
+		}
+    }
+}
+.big-head{
+    font-size: 200px;
+    font-weight: 800;
+    line-height: 0;
+}
+.strip-kuning{
+    width: 100%;
+    height: 250px;
+    display: block;
+    position: absolute;
+    top:30%;
+}
+.book {
+    position: relative;
+    margin-bottom: 30px;
+    a{
+        &::after {
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 15px;
+            right:-15px;
+            bottom:10px;
+            z-index:-10;
+            border-radius:15px;
+            background-color:#d9d9d9;
+        }
+        img{
+            border-radius:15px;
+        }
+    }
+    .caption{
+        position: absolute;
+        bottom: -50px;
+        z-index: 10;
+        width: 100%;
+        text-align: center;
+        font-weight: 500;
+        font-size: 23px;
+    }
+   
+}
